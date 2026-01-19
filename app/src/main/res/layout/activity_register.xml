@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="24dp"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/judul_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/register"
+        android:textColor="@color/blue_primary"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="@string/nama"
+        app:boxStrokeColor="@color/blue_primary"
+        app:hintTextColor="@color/blue_primary"
+        app:layout_constraintTop_toBottomOf="@+id/judul_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/email"
+        app:boxStrokeColor="@color/blue_primary"
+        app:hintTextColor="@color/blue_primary"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutNama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/password"
+        app:boxStrokeColor="@color/blue_primary"
+        app:hintTextColor="@color/blue_primary"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/tombolMataPassword"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_visibility_off"
+        android:contentDescription="@string/tampilkan_password"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutPassword"
+        app:layout_constraintTop_toTopOf="@+id/inputLayoutPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/inputLayoutPassword"
+        android:layout_marginEnd="8dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutKonfirmasiPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/konfirmasi_password"
+        app:boxStrokeColor="@color/blue_primary"
+        app:hintTextColor="@color/blue_primary"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputKonfirmasiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/tombolMataKonfirmasi"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_visibility_off"
+        android:contentDescription="@string/tampilkan_password"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutKonfirmasiPassword"
+        app:layout_constraintTop_toTopOf="@+id/inputLayoutKonfirmasiPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/inputLayoutKonfirmasiPassword"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/tombolRegister"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_button_blue"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutKonfirmasiPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/linkLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sudah_punya_akun"
+        android:textColor="@color/blue_primary"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tombolRegister" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
